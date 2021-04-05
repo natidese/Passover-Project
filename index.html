@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Users - APP</title>
+</head>
+
+<body>
+    <nav id="MyNav">
+        <a id="tabelObject" onclick="printTableOfUserInfro()" href="#">Users Tabel</a>
+        <a id="home" onclick="printUsersInformation()" href="#">Home</a>
+        <a id="userForm" onclick="fillFormForUser()" href="#">Add User</a>
+    </nav>
+
+    <header id="head">
+        <a href="https://www.facebook.com/tech.career" target="_blank"><img src="./pics/טק קריירה.jfif" alt=""></a>
+        <img src="./pics/indi-logo.jpeg" alt="">
+    </header>
+
+
+    <div id="mySideNav" class="sideNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&Otimes;</a>
+        <a href="#">Home</a>
+        <a href="#">Users</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <span class="sticky-top" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+
+
+    <section>
+        <div id="mainDiv"></div>
+        <div id="unMainDiv"></div>
+    </section>
+
+    <footer id="MyFooter">
+        <a href="https://github.com/natidese" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/natidese/" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+        <a href="https://www.facebook.com/natidese" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/natidese/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        © NATI DESE , 2021. The materials on this website may be copied online, but may not be
+        reproduced in print or any other media without written permission.
+    </footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/html"  id="user-details-template">
+        <div class ="cards" id ="card${{index}}">
+            <h3 class="cardUserHeadLine">Full Name:</h3>{{name.first}} {{name.last}}
+            <p class="cardUserHeadLine">email:</p>{{email}}
+            <p class="cardUserHeadLine">Age:</p>{{age}}
+            <p class="cardUserHeadLine">Phone:</p>{{phone}}<br/>
+            <img src={{picture}} height="150px" width="150px" onclick="showUserCardInfotmation({{index}})">
+            </div>
+    </script>
+    <script type="text/html" id="user-card-template">
+    <div class="cardUserOnly">
+        <h3 class="cardUserHeadLine">Full Name:</h3>{{name.first}} {{name.last}}
+        <p class="cardUserHeadLine">email:</p>{{email}}
+        <p class="cardUserHeadLine">Age:</p>{{age}}
+        <p class="cardUserHeadLine">Phone:</p>{{phone}}<br/>
+        <img src="{{picture}}" height="150px" width="150px" >
+        </div>
+    </script>
+
+</body>
+
+</html>
+
+
