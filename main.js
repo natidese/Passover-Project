@@ -158,7 +158,7 @@ function showUserCardInfotmation(cardIndex) {
                 let renderHTML = Mustache.to_html(
                     template, foundUser);
 
-                    unMainDiv.innerHTML = renderHTML;
+                unMainDiv.innerHTML = renderHTML;
             }
         });
     }

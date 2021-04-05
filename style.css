@@ -120,7 +120,7 @@ input[type="image"]{
 }
 
 .cardUserOnly:hover{
-    box-shadow: -1px -1px 20px 6px rgba(0, 0, 255, 0.438);
+    box-shadow: -1px -1px 20px 6px rgba(240, 90, 90, 0.438);
 }
 #head{
     display: flex;
